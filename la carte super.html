@@ -14,7 +14,7 @@
     <p>Pour ce projet j'ai utilise 5 tableau de 2 base de donnee :</p>
     <ul>
         <l>-4 tableau issu de la base de donnee des releve sur toutes les antennes de reseau mobile de la metropole, 1 pour chaque trimestre de 2019.</l>
-        <l>-1 tableau contenant la localisation de toutes les prefectures de France</l> 
+        <l>-1 tableau contenant la localisation de toutes les prefectures de France pour realiser une representation de chaque departement</l> 
         </ul>
     <p> Ces bases de donnes sont toutes les 2 issues du cite du gouvernement</p>
     
@@ -32,6 +32,45 @@
         
         
     <a href='carte.html'>La carte du projet</a>
+        
+        
+    <p> Cette carte est realise grace a la bibliotheque folium, et a la bibliotheque de lecture de CSV creer en classe.</p>
+        
+    <p> Le programme se decoupe en 2 partie </p>
+        <ul>
+            <l>- Une partie visant a la preparation des tableaux</l> 
+            <l>La seconde consistant a l'exploitation de ceci</l>
+        </ul>
+        
+    <p>Nous allons nous interesse a la seconde phase</p>
+        
+    <img src='prems.PNG'/>
+        
+    <img src='second.PNG'/>
+        
+    <p>Voici la fonction se nommant 'placerlesprefecture' qui est la partie d'exploitation des tableaux. On observe qu'elle est faite d'une boucle bornee, qui place toutes les prefectures de france en leur ajoutant en tooltip le nom de la prefecture et en popup un graphique defini par la fonction fairepopup. </p>
+        
+    <img src='princi.PNG'/>
+        
+    <p>La fonction faire popup est la plus importante, comme son nom l'indique elle consiste a realise le graphique affiche en popup</p>
+        
+    <img src='faire%20popup.PNG'/>
+        
+    <p>Elle est constitue d'une seule instruction etant l'attribution de la valeur de popup qui sollicite les autres  fonctions presente pour les valeurs qui sont rentre dans l'instruction de l'extension Vegalite de folium</p>
+        
+    <img src='instpop.PNG'/>    
+        
+    <p>On voit donc que la valeur entre dans le graphique est issu de la fonction 'makechart' qui realise le fichier du format voulu par Vegalite, en y associant les valeurs trouve par la fonction presente dans 'makechart', la fonction the value, qui consiste a chercher les antennes d'un departement voulu dans les tableaux de releve trimestrielle pour compter le nombre d'antenne emettant de la 4G et le nombre total d'antenne dans ce departement pour realiser le pourcentage.</p>
+        
+    <img src='makeachart.PNG'/>
+        
+    <p>Ce projet est fonctionnel mais ne represente pas totalement ce que je voulais faire</p>
+        <ul>
+        <l>J'aurais voulu faire un graphique different transmettant les proportions de chaque etat des equipements, mais je n'ai pas pu par manque de temps et de connaissance concerant Vegalite</l>
+        <l>Placer chaque antenne sous forme d'un cercle mais les coordonnes etant en lambert 93 et je n'ai jamais reussi a le faire correctement, une de mes nombreuses perte de temps</l>
+        <l>Enfin j'aurais prefere mieux soigne ce site mais je m'y suis pris trop tard</l>
+    <p> J'espere que vous apprecierez mon projet et merci d'y avoir passe un peu de temps.</p>
+        </ul>
 
         
     </body>
